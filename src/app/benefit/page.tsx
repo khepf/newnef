@@ -96,12 +96,12 @@ export default function Benefit() {
                 </tr>
                 <tr>
                 <td>
-                    <input type="text" name="os1" maxLength="200" />
+                    <input type="text" name="os1" maxLength={200} />
                 </td>
                 </tr>
                 </table>
                 <input type="hidden" name="currency_code" value="USD" />
-                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Add to Cart" />
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Add to Cart" />
             </form>
         </div>
 
@@ -139,7 +139,7 @@ export default function Benefit() {
                         </tr>
                     </table>
                 <input type="hidden" name="currency_code" value="USD" />
-                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Add to Cart" />
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Add to Cart" />
                 </form>
         </div>
       </section>
