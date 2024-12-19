@@ -89,7 +89,7 @@ function LeftNavbar() {
     };
     return (
         <>
-          <div className="hidden relative bg-gray-200 py-6 sm:flex flex-col justify-center">
+          <div className="hidden relative sticky top-0 bg-gray-200 py-6 sm:flex flex-col justify-center">
             <LeftNavbar />
             <DesktopNavLinks />
           </div>
