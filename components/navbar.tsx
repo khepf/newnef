@@ -8,7 +8,7 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
 function DesktopNavLinks() {
     return (
-        <ul className="absolute right-0 flex flex-row space-x-6">
+        <ul className="absolute right-3 flex flex-row space-x-6">
         <li className="text-xl hover:text-blue-900 hover:font-semibold">
             <Link href="/">Home</Link>
         </li>
@@ -33,10 +33,8 @@ function DesktopNavLinks() {
 
 function LogoLink() {
     return (
-      <div className="mb-4 text-center sm:mb-0">
-        <Link href="/">
-          {/* Your logo component */}
-        </Link>
+      <div className=" ml-4 mb-4 text-left sm:mb-0">
+        <h1>Nick Erdy Foundation</h1>
       </div>
     );
   }
@@ -63,7 +61,21 @@ function LogoLink() {
           <li className="text-3xl hover:text-blue-900 hover:font-semibold">
             <Link href="/">Home</Link>
           </li>
-          {/* Add other navigation links */}
+          <li className="text-3xl hover:text-blue-900 hover:font-semibold">
+            <Link href="/about">About</Link>
+          </li>
+          <li className="text-3xl hover:text-blue-900 hover:font-semibold">
+            <Link href="/benefit">Benefit</Link>
+          </li>
+          <li className="text-3xl hover:text-blue-900 hover:font-semibold">
+            <Link href="/golf">Golf Outing</Link>
+          </li>
+          <li className="text-3xl hover:text-blue-900 hover:font-semibold">
+            <Link href="/contact">Contact</Link>
+          </li>
+          <li className="text-3xl hover:text-blue-900 hover:font-semibold">
+            <Link href="/donate">Donate</Link>
+          </li>
         </ul>
       </div>
     );
