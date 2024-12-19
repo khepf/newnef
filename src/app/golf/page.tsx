@@ -5,37 +5,31 @@ import FoundationInfo from "../../../components/foundationInfo";
 export default function Golf() {
   return (
     <div className="flex flex-col items-center bg-white">
-      <Image
-        src="/images/neflogo.png" // Path to your image in the public folder
-        alt="Logo"
-        width={1000} // Adjust the width
-        height={300} // Adjust the height
-        className="" // Optional Tailwind classes for styling
-      />
+
       
-      <section className="flex flex-row items-center justify-between bg-white p-8">
+      <section className="flex flex-col md:flex-row items-center justify-between bg-white p-8">
         {/* Left Half */}
-        <div className="w-1/2 pr-4">
-            <h1 className="text-4xl font-bold text-black mb-4">
+        <div className="w-full md:w-1/2 pr-0 md:pr-4 mb-6 md:mb-0">
+            <h1 className="text-4xl sm:text-4xl font-extrabold text-black mb-6 leading-snug">
                 19th Annual 2025 Nick Erdy Foundation Golf Outing
             </h1>
-            <p className="text-black mb-4">
+            <p className="text-lg sm:text-xl text-gray-700 mb-4 leading-relaxed">
                 will be held on May 31st, 2025 at the Hickory Woods Golf Course in
                 Loveland. Registration is from 12 to 1pm with a shotgun start at
                 1:30 pm. Cost of ticket also includes dinner and Two (2) drink
                 tickets.
             </p>
-            <p className="text-black mb-4">
+            <p className="text-lg sm:text-xl text-gray-700 mb-4 leading-relaxed">
                 Awards and prizes for 1st place, longest drive, closest to the pin
                 and longest putt.
             </p>
-            <p className="text-black mb-4">
+            <p className="text-lg sm:text-xl text-gray-700 mb-4 leading-relaxed">
                 Checks can be mailed to address below or payment can now be made
                 via PayPal. PayPal is fast, convenient and you don't need a PayPal
                 account to use this method of payment. Let us know if you have any
                 questions.
             </p>
-            <p className="text-black">
+            <p className="text-lg sm:text-xl text-gray-700 mb-4 leading-relaxed">
                 It is the goal of this foundation to continue these works for many
                 years to come. Through the generosity of so many wonderful people,
                 both here at home, and all over the United States, we can continue
@@ -44,7 +38,7 @@ export default function Golf() {
         </div>
 
         {/* Right Half */}
-        <div className="w-1/2 pl-4 flex justify-center">
+        <div className="w-full md:w-1/2 pl-0 md:pl-4 flex flex-col items-center">
             <Image
                 src="/images/golf1.jpg"
                 alt="Home Section Image"
@@ -52,7 +46,7 @@ export default function Golf() {
                 height={300}
                 className="rounded-lg"
             />
-            <h1>Additional Info</h1>
+            <h1 className="text-2xl sm:text-2xl font-bold text-black mb-6 leading-snug">Additional Info</h1>
             <Image
                 src="/images/hickoryWoods.jpg"
                 alt="Home Section Image"
@@ -61,9 +55,22 @@ export default function Golf() {
                 className="rounded-lg"
              />
             <div>
-            <Link href="/images/2025Golf.pdf" target="_blank" rel="noopener noreferrer">
-                Golf Outing Registration Form
-            </Link>
+            <div className="text-lg sm:text-xl text-blue-700 mb-4 leading-relaxed">
+              <Link href="/images/2025Golf.pdf" target="_blank" rel="noopener noreferrer">
+                  Golf Outing Registration Form
+              </Link>
+            </div>
+            <div className="text-lg sm:text-xl text-blue-700 mb-4 leading-relaxed">
+              <Link href="http://www.hickorywoods.com/directions" target="_blank" rel="noopener noreferrer">
+                  Directions to Course
+              </Link>
+            </div>
+            <div>
+              <p className="text-lg sm:text-xl text-gray-700 mb-1 leading-relaxed">1240 Hickory Woods Drive</p>
+              <p className="text-lg sm:text-xl text-gray-700 mb-1 leading-relaxed">Loveland, OH 45140</p>
+              <p className="text-lg sm:text-xl text-gray-700 mb-1 leading-relaxed">Tel: 513-575-3900</p>
+            </div>
+            
             </div>
         </div>
       </section>

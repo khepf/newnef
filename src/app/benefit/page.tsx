@@ -12,41 +12,41 @@ export default function Benefit() {
         className=""
       />
       
-      <section className="flex flex-row items-center justify-between bg-white p-8">
+      <section className="flex flex-col md:flex-row items-center justify-between bg-white p-8">
         {/* Left Half */}
-        <div className="w-1/2 pr-4">
-        <h1 className="text-4xl font-bold text-black mb-4">
-            2024 Annual Benefit
-        </h1>
-        <p className="text-black mb-4">
-            Please join us for the 19th Annual Nick Erdy Foundation - Dinner,
-            Dance and Auction on Saturday November 23rd, 2024 at Norlyn Manor!
-        </p>
-        <p className="text-black mb-4">
-            The doors will open at 5:30pm with an open bar followed by a
-            silent auction, dinner, dancing, Split-the-Pot, raffles and so
-            much more!
-        </p>
-        <p className="text-black mb-4">
-            Checks can be mailed to address below or payment can now be made
-            via PayPal. PayPal is fast, convenient and you don't need a PayPal
-            account to use this method of payment. Let us know if you have any
-            questions.
-        </p>
+        <div className="w-full md:w-1/2 pr-0 md:pr-4 mb-6 md:mb-0">
+            <h1 className="text-4xl sm:text-4xl font-extrabold text-black mb-6 leading-snug">
+                2024 Annual Benefit
+            </h1>
+            <p className="text-lg sm:text-xl text-gray-700 mb-4 leading-relaxed">
+                Please join us for the 19th Annual Nick Erdy Foundation - Dinner,
+                Dance and Auction on Saturday November 23rd, 2024 at Norlyn Manor!
+            </p>
+            <p className="text-lg sm:text-xl text-gray-700 mb-4 leading-relaxed">
+                The doors will open at 5:30pm with an open bar followed by a
+                silent auction, dinner, dancing, Split-the-Pot, raffles and so
+                much more!
+            </p>
+            <p className="text-lg sm:text-xl text-gray-700 mb-4 leading-relaxed">
+                Checks can be mailed to address below or payment can now be made
+                via PayPal. PayPal is fast, convenient and you don't need a PayPal
+                account to use this method of payment. Let us know if you have any
+                questions.
+            </p>
         </div>
 
         {/* Right Half */}
-        <div className="w-1/2 pl-4 flex justify-center">
+        <div className="w-full md:w-1/2 pl-0 md:pl-4 flex justify-center">
           <Image
             src="/images/benefit2.jpg"
             alt="Home Section Image"
-            width={300}
+            width={400}
             height={300}
             className="rounded-lg"
           />
         </div>
       </section>
-      <section className="flex flex-row items-center justify-between bg-white p-8">
+      <section className="flex flex-col md:flex-row items-center justify-between bg-white p-8">
         {/* Left Half */}
         <div className="w-1/2 pr-4">
             <h3>Individual Ticket - $90/person</h3>

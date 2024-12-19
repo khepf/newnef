@@ -1,37 +1,28 @@
 "use client"
 
-import Link from 'next/link';
-import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/link'; 
+import { usePathname } from 'next/navigation';
+import React, { useState } from 'react'; 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 
-function DesktopNavLinks() {
+  function DesktopNavLinks() {
+    const pathname = usePathname();
     return (
-        <ul className="absolute right-3 flex flex-row space-x-6">
-        <li className="text-xl text-gray-700 hover:text-gray-900">
-            <Link href="/">Home</Link>
-        </li>
-        <li className="text-xl text-gray-700 hover:text-gray-900">
-            <Link href="/about">About</Link>
-        </li>
-        <li className="text-xl text-gray-700 hover:text-gray-900">
-            <Link href="/benefit">Benefit</Link>
-        </li>
-        <li className="text-xl text-gray-700 hover:text-gray-900">
-            <Link href="/golf">Golf Outing</Link>
-        </li>
-        <li className="text-xl  text-gray-700 hover:text-gray-900">
-            <Link href="/contact">Contact</Link>
-        </li>
-        <li className="text-xl text-gray-700 hover:text-gray-900">
-            <Link href="/donate">Donate</Link>
-        </li>
-        </ul>
+      <div className="container mx-auto px-6">
+        <ul className="absolute right-3 flex flex-row space-x-6 items-center top-1/2 transform -translate-y-1/2"> 
+        {[ 
+          { href: '/', label: 'Home' }, 
+          { href: '/about', label: 'About' }, 
+          { href: '/benefit', label: 'Benefit' }, 
+          { href: '/golf', label: 'Golf Outing' }, 
+          { href: '/contact', label: 'Contact' }, 
+          { href: '/donate', label: 'Donate' }, ].map((link) => ( 
+            <li key={link.href} 
+              className={`text-xl text-gray-700 hover:text-gray-900 ${ pathname === link.href ? 'active text-gray-800' : '' }`} > <Link href={link.href}>{link.label}</Link> </li> ))} </ul>
+      </div>
     );
   }
-
-
 
   function MobileMenuButton({ onClick }: { onClick: () => void }) {
     return (
@@ -83,7 +74,7 @@ function DesktopNavLinks() {
     };
     return (
         <>
-          <div className="hidden relative sticky top-0 bg-gray-200 py-6 sm:flex flex-col justify-center">
+          <div className="hidden relative sticky top-0 z-20 mb-3 bg-gray-200 py-4 shadow-md sm:flex">
             <DesktopNavLinks />
           </div>
           <div className="sm:hidden relative flex flex-row my-4">
