@@ -9,31 +9,31 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons';
 function DesktopNavLinks() {
     return (
         <ul className="absolute right-3 flex flex-row space-x-6">
-        <li className="text-xl hover:text-blue-900 hover:font-semibold">
+        <li className="text-xl text-gray-700 hover:text-gray-900">
             <Link href="/">Home</Link>
         </li>
-        <li className="text-xl hover:text-blue-900 hover:font-semibold">
+        <li className="text-xl text-gray-700 hover:text-gray-900">
             <Link href="/about">About</Link>
         </li>
-        <li className="text-xl hover:text-blue-900 hover:font-semibold">
+        <li className="text-xl text-gray-700 hover:text-gray-900">
             <Link href="/benefit">Benefit</Link>
         </li>
-        <li className="text-xl hover:text-blue-900 hover:font-semibold">
+        <li className="text-xl text-gray-700 hover:text-gray-900">
             <Link href="/golf">Golf Outing</Link>
         </li>
-        <li className="text-xl hover:text-blue-900 hover:font-semibold">
+        <li className="text-xl  text-gray-700 hover:text-gray-900">
             <Link href="/contact">Contact</Link>
         </li>
-        <li className="text-xl hover:text-blue-900 hover:font-semibold">
+        <li className="text-xl text-gray-700 hover:text-gray-900">
             <Link href="/donate">Donate</Link>
         </li>
         </ul>
     );
   }
 
-function LogoLink() {
+function LeftNavbar() {
     return (
-      <div className=" ml-4 mb-4 text-left sm:mb-0">
+      <div className=" ml-4 mb-4 text-left text-xl text-gray-700 sm:mb-0">
         <h1>Nick Erdy Foundation</h1>
       </div>
     );
@@ -89,12 +89,12 @@ function LogoLink() {
     };
     return (
         <>
-          <div className="hidden relative py-6 sm:flex flex-col justify-center">
-            <LogoLink />
+          <div className="hidden relative bg-gray-200 py-6 sm:flex flex-col justify-center">
+            <LeftNavbar />
             <DesktopNavLinks />
           </div>
           <div className="sm:hidden relative flex flex-row my-4">
-            <LogoLink />
+            <LeftNavbar />
             <MobileMenuButton onClick={handleDrawerToggle} />
             <MobileDrawer isOpen={isDrawerOpen} onClose={handleDrawerToggle} />
           </div>
