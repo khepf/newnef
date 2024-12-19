@@ -31,13 +31,7 @@ function DesktopNavLinks() {
     );
   }
 
-function LeftNavbar() {
-    return (
-      <div className=" ml-4 mb-4 text-left text-xl text-gray-700 sm:mb-0">
-        <h1>Nick Erdy Foundation</h1>
-      </div>
-    );
-  }
+
 
   function MobileMenuButton({ onClick }: { onClick: () => void }) {
     return (
@@ -90,11 +84,9 @@ function LeftNavbar() {
     return (
         <>
           <div className="hidden relative sticky top-0 bg-gray-200 py-6 sm:flex flex-col justify-center">
-            <LeftNavbar />
             <DesktopNavLinks />
           </div>
           <div className="sm:hidden relative flex flex-row my-4">
-            <LeftNavbar />
             <MobileMenuButton onClick={handleDrawerToggle} />
             <MobileDrawer isOpen={isDrawerOpen} onClose={handleDrawerToggle} />
           </div>

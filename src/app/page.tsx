@@ -7,12 +7,12 @@ export default function Home() {
       <Image
         src="/images/neflogo.png"
         alt="Logo"
-        width={1000} 
-        height={10000} 
-        className="" // Optional Tailwind classes for styling
+        width={1000}
+        height={300}
+        className="w-full max-w-md sm:max-w-lg md:max-w-xl"
       />
-      
-      <section className="flex flex-row items-center justify-between bg-white p-8">
+
+      <section className="flex flex-row items-center justify-between bg-gray-50 p-8 rounded-lg shadow-md">
         {/* Left Half */}
         <div className="w-1/2 pr-4">
         <h1 className="text-4xl sm:text-4xl font-extrabold text-black mb-6 leading-snug">
@@ -43,7 +43,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <section>
+      <section className="bg-gray-50 p-8 m-2 rounded-lg shadow-md">
         <FoundationInfo /> 
       </section>
    
