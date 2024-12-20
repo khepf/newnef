@@ -1,7 +1,58 @@
 import Image from "next/image";
 import FoundationInfo from "../../../components/foundationInfo";
+import PayPalForm from "../../../components/paypalform";
 
 export default function Benefit() {
+
+    const individualDinnerFormTitle = "Individual Ticket - $75/person";
+    const individualDinnerFormSubtitle = "(Price Increases to $90/person on November 1st)";
+    const individualDinnerType = "Attendees";
+    const individualDinnerBtnId = "JMK3F88JP645U";
+    const individualDinnerOptions = [
+        { value: '1 Person', label: '1 Person $75.00 USD' },
+        { value: '2 People', label: '2 People $150.00 USD' },
+        { value: '3 People', label: '3 People $225.00 USD' },
+        { value: '4 People', label: '4 People $300.00 USD' },
+        { value: '5 People', label: '5 People $375.00 USD' },
+        { value: '6 People', label: '6 People $450.00 USD' },
+        { value: '7 People', label: '7 People $525.00 USD' },
+        ];
+
+    const individualDinnerAfterNov1FormTitle = "Individual Ticket - $90/person";
+    const individualDinnerAfterNov1Type = "Attendees";
+    const individualDinnerAfterNov1BtnId = "5LTPXCEWRNELN";
+    const individualDinnerOptionsAfterNov1 = [
+        { value: '1 Person', label: '1 Person $90.00 USD' },
+        { value: '2 People', label: '2 People $180.00 USD' },
+        { value: '3 People', label: '3 People $270.00 USD' },
+        { value: '4 People', label: '4 People $360.00 USD' },
+        { value: '5 People', label: '5 People $450.00 USD' },
+        { value: '6 People', label: '6 People $540.00 USD' },
+        { value: '7 People', label: '7 People $630.00 USD' },
+      ];
+
+      const tableDinnerFormTitle = "Table Reservation - $600/table";
+      const tableDinnerFormSubtitle = "Seats Up To 8 People";
+      const tableDinnerType = "Attendees";
+      const tableDinnerBtnId = "LJGHBCWK4BJQW";
+      const tableDinnerOptions = [
+          { value: '1 Table', label: '1 Table $600.00 USD' },
+          { value: '2 Tables', label: '2 Tables $1200.00 USD' },
+          { value: '3 Tables', label: '3 Tables $1800.00 USD' },
+          { value: '4 Tables', label: '4 Tables $2400.00 USD' },
+          ];
+
+      const tableDinnerAfterNov1FormTitle = "Table Reservation - $720/table";
+      const tableDinnerAfterNov1FormSubtitle = "Seats Up To 8 People";
+      const tableDinnerAfterNov1Type = "Attendees";
+      const tableDinnerAfterNov1BtnId = "TJ6PHQ52DWUQW";
+      const tableDinnerAfterNov1Options = [
+          { value: '1 Table', label: '1 Table $720.00 USD' },
+          { value: '2 Tables', label: '2 Tables $1440.00 USD' },
+          { value: '3 Tables', label: '3 Tables $2160.00 USD' },
+          { value: '4 Tables', label: '4 Tables $2880.00 USD' },
+          ];
+
   return (
     <div className="flex flex-col items-center bg-white">
       <Image
@@ -49,98 +100,13 @@ export default function Benefit() {
       <section className="flex flex-col md:flex-row items-center justify-between bg-white p-8">
         {/* Left Half */}
         <div className="w-1/2 pr-4">
-            <h3>Individual Ticket - $90/person</h3>
             {/* <h5>(price increases to $90/person on November 1st)</h5> */}
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" className="formIndividual">
-                <input type="hidden" name="cmd" value="_s-xclick" />
-                <input type="hidden" name="hosted_button_id" value="QZALKA3BDJVKA" />
-                <table>
-                <tr>
-                    <td>
-                    <input type="hidden" name="on0" value="Number of Tickets"/>
-                    Number of Tickets
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <select name="os0">
-                        <option value="1 Person">
-                            1 Person $90.00 USD
-                        </option>
-                        <option value="2 People">
-                            2 People $180.00 USD
-                        </option>
-                        <option value="3 People">
-                            3 People $270.00 USD
-                        </option>
-                        <option value="4 People">
-                            4 People $360.00 USD
-                        </option>
-                        <option value="5 People">
-                            5 People $450.00 USD
-                        </option>
-                        <option value="6 People">
-                            6 People $540.00 USD
-                        </option>
-                        <option value="7 People">
-                            7 People $630.00 USD
-                        </option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="hidden" name="on1" value="List Attendee Names Here:"/>
-                        List Attendee Names Here:
-                    </td>
-                </tr>
-                <tr>
-                <td>
-                    <input type="text" name="os1" maxLength={200} />
-                </td>
-                </tr>
-                </table>
-                <input type="hidden" name="currency_code" value="USD" />
-                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Add to Cart" />
-            </form>
+            <PayPalForm formTitle={individualDinnerFormTitle} formSubtitle={individualDinnerFormSubtitle} ticketType={individualDinnerType} paypalBtnId={individualDinnerBtnId} options={individualDinnerOptions}/>
         </div>
 
         {/* Right Half */}
         <div className="w-1/2 pl-4 ">
-            <h3>Table Reservation (seats up to 8 ) - $720/table</h3>
-            {/* <h5>(price increases to $720/table on November 1st)</h5> */}
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" className="formGroup">
-                    <input type="hidden" name="cmd" value="_s-xclick" />
-                    <input type="hidden" name="hosted_button_id" value="8CJ8G4XA39G6L" />
-                    <table>
-                        <tr>
-                        <td>
-                            <input type="hidden" name="on0" value="How Many Tables?"/>
-                            How Many Tables?
-                        </td>
-                        </tr>
-                        <tr>
-                        <td>
-                            <select name="os0">
-                            <option value="1 Table">
-                                1 Table $720.00 USD
-                            </option>
-                            <option value="2 Tables">
-                                2 Tables $1,440.00 USD
-                            </option>
-                            <option value="3 Tables">
-                                3 Tables $2,160.00 USD
-                            </option>
-                            <option value="4 Tables">
-                                4 Tables $2,880.00 USD
-                            </option>
-                            </select>
-                        </td>
-                        </tr>
-                    </table>
-                <input type="hidden" name="currency_code" value="USD" />
-                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Add to Cart" />
-                </form>
+            <PayPalForm formTitle={tableDinnerFormTitle} formSubtitle={tableDinnerFormSubtitle} ticketType={tableDinnerType} paypalBtnId={tableDinnerBtnId} options={tableDinnerOptions}/>
         </div>
       </section>
       <section>
